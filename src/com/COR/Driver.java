@@ -19,9 +19,6 @@ public class Driver {
         Employee work = work();
         
         work.doWork(Employee.PART_COLLECTOR, "What up bro! ");
-       // employeeChain.doWork(Employee.ASSEMBLER, "This is the work for a part collector");
-       // employeeChain.doWork(Employee.WELDER, "This is the work for a assembler.");
-       // employeeChain.doWork(Employee.PAINTER, "This is the work for a welder.");
     }
 
 }
