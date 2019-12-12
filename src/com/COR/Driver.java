@@ -8,17 +8,20 @@ public class Driver {
         Employee welder = new WELDER(Employee.WELDER);
         Employee painter = new PAINTER(Employee.PAINTER);
         
-        part_collector.setNextEmployee(assembler);
-        assembler.setNextEmployee(welder);
-        welder.setNextEmployee(painter);
+        painter.setNextEmployee(welder);
+        welder.setNextEmployee(assembler);
+        assembler.setNextEmployee(part_collector);
 
-        return part_collector;
+        return painter;
     }
 
     public static void main(String[] args) {
         Employee work = work();
         
-        work.doWork(Employee.PART_COLLECTOR, "What up bro! ");
+        work.doWork(Employee.PAINTER, "Painter bro! ");
+        work.doWork(Employee.WELDER, "Welder bro! ");
+        work.doWork(Employee.ASSEMBLER, "Assembler bro! ");
+        work.doWork(Employee.PART_COLLECTOR, "Part Collector bro! ");
     }
 
 }
